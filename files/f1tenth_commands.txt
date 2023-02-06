@@ -1,0 +1,4 @@
+source devel/setup.bash 
+rostopic
+rostopic list
+rostopic echo /scan

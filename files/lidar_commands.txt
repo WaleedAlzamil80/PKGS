@@ -1,0 +1,41 @@
+##Go inside the workspace## 
+
+
+source devel/setup.bash 
+
+
+##Then go inside src then rplidar##
+
+
+cd rplidar_ros/
+
+
+##lauch the simulator and make the lidar start rotating##
+
+
+roslaunch rplidar_ros view_rplidar.launch
+
+
+## record a bag from the node revised scan which is the node in the LidarTesting python file ##
+
+
+rosbag record /revised_scan
+
+
+## To simulate the bag outputs ##
+
+
+rostopic echo /revised_scan
+
+
+## m4 3aref bet3mel eh ##
+rostopic hz /revised_scan
+
+
+
+
+##Others## the scan is the name of the topic in the lidar simulator
+
+rostopic list
+rostopic /scan
+rostopic info /scan 
